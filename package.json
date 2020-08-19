@@ -1,7 +1,18 @@
 {
   "name": "react-to-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert react components to plain text without any HTML markup",
+  "keywords": [
+    "react",
+    "utility",
+    "typescript",
+    "conversion"
+  ],
+  "homepage": "https://github.com/lhansford/react-to-text",
+  "bugs": {
+    "url": "https://github.com/lhansford/react-to-text/issues",
+    "email": "mail@lukehansford.me"
+  },
   "author": "Luke Hansford",
   "license": "MIT",
   "files": [
