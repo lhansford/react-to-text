@@ -1,5 +1,6 @@
 # react-to-text
 
+![npm](https://img.shields.io/npm/v/react-to-text)
 ![CI](https://github.com/lhansford/react-to-text/workflows/CI/badge.svg)
 
 Convert react components to plain text without any HTML markup. Written in Typscript with zero dependencies.
