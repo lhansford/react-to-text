@@ -45,7 +45,7 @@
     "@types/react-dom": "^16.9.8",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.32.0",
     "eslint-config-fishbrain": "^2.0.0",
     "eslint-plugin-jest-dom": "^3.1.5",
     "eslint-plugin-jest-formatting": "^2.0.0",
