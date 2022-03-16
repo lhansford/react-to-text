@@ -1,6 +1,8 @@
 import React from 'react';
 
-import reactToText from './index';
+import reactToText, { ResolverMap } from './index';
+
+const CustomComponent: React.FC<{ title: string }> = (props) => <p>{props.title}</p>;
 
 describe('reactToText', () => {
   describe('When given text', () => {
@@ -81,6 +83,23 @@ describe('reactToText', () => {
   describe('When component HTML entity', () => {
     it('Returns the html entity rendered to text', () => {
       expect(reactToText(<div>one &mdash; two</div>)).toBe('one — two');
+    });
+  });
+
+  describe('When given a custom component', () => {
+    it('Returns uses the custom resolver behavior', () => {
+      const resolvers: ResolverMap = new Map([
+        [CustomComponent, (props: { title: string }) => props.title],
+      ]);
+
+      expect(
+        reactToText(
+          <div>
+            foo <CustomComponent title="bar" />
+          </div>,
+          resolvers,
+        ),
+      ).toBe('foo bar');
     });
   });
 });

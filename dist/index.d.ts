@@ -1,3 +1,4 @@
 import React from 'react';
-declare function reactToText(node: React.ReactNode): string;
+export declare type ResolverMap = Map<string | React.JSXElementConstructor<any>, (props: any) => string>;
+declare function reactToText(node: React.ReactNode, resolvers?: ResolverMap): string;
 export default reactToText;
