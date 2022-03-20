@@ -14,6 +14,7 @@ npm install --save react-to-text
 
 ## Usage
 
+### Out of the box
 react-to-text takes in any React component and will return the text content (without any HTML). It
 will accept any value React can render (strings, arrays, Fragments, etc.), and can handle deeply
 nested components.
@@ -29,6 +30,29 @@ const text = reactToText(
 
 console.log(text);
 > "We sell apples and oranges."
+```
+
+### Custom logic
+The default logic won't always work, for example when you have a custom component which simply renders one of it's props.
+In this case you can define custom stringification behavior using a second argument.
+
+```jsx
+import reactToText, { ResolverMap } from 'react-to-text';
+
+const CustomComponent: React.FC<{ title: string }> = (props) => <p>{props.title}</p>;
+
+// since this component does not have any direct children
+// it will not output anything by default
+console.log(reactToText(<CustomComponent title="foo" />));
+> ""
+
+// using a custom resolver map using the custom component as it's key
+// and the stringification logic as it's value, we can adjust this behavior
+const resolvers: ResolverMap = new Map([
+  [CustomComponent, (props: { title: string }) => props.title],
+]);
+console.log(reactToText(<CustomComponent title="foo" />, resolvers));
+> "foo"
 ```
 
 ## License
