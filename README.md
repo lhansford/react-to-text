@@ -55,6 +55,10 @@ console.log(reactToText(<CustomComponent title="foo" />, resolvers));
 > "foo"
 ```
 
+## Deploying
+
+Deploys to NPM are automatically run when a release is created in Github (see [`.github/workflows/npm-publish.yml`](.github/workflows/npm-publish.yml)).
+
 ## License
 
 Licensed under MIT.
