@@ -55,7 +55,7 @@
     "react-test-renderer": "^18.2.0",
     "rollup": "^2.70.1",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-typescript2": "^0.32.1",
+    "rollup-plugin-typescript2": "^0.34.1",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.2"
   },
