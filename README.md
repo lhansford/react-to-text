@@ -15,6 +15,7 @@ npm install --save react-to-text
 ## Usage
 
 ### Out of the box
+
 react-to-text takes in any React component and will return the text content (without any HTML). It
 will accept any value React can render (strings, arrays, Fragments, etc.), and can handle deeply
 nested components.
@@ -33,6 +34,7 @@ console.log(text);
 ```
 
 ### Custom logic
+
 The default logic won't always work, for example when you have a custom component which simply renders one of it's props.
 In this case you can define custom stringification behavior using a second argument.
 
