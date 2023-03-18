@@ -1,6 +1,6 @@
 {
   "name": "react-to-text",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Convert react components to plain text without any HTML markup",
   "keywords": [
     "react",
