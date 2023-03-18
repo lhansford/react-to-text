@@ -29,3 +29,5 @@ combined.log
 
 # Use Yarn instead :D
 package-lock.json
+
+.parcel-cache
