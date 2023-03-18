@@ -17,7 +17,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "outDir": "dist",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "declaration": true,
     "lib": [
       "dom",

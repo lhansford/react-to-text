@@ -3,7 +3,7 @@ import React, { isValidElement } from 'react';
 
 export type ResolverMap = Map<string | React.JSXElementConstructor<any>, (props: any) => string>;
 
-function reactToText(node: React.ReactNode, resolvers?: ResolverMap): string {
+function reactToText(node: React.ReactNode | object, resolvers?: ResolverMap): string {
   if (typeof node === 'string' || typeof node === 'number' || typeof node === 'boolean') {
     return node.toString();
   }
